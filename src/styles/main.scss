@@ -1,11 +1,20 @@
 @import 'utils';
 @import 'fonts';
 @import 'typography';
+@import 'layout/container';
+@import 'blocks/header';
+@import 'blocks/burger';
+@import 'blocks/nav';
+@import 'blocks/logo';
 
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {
@@ -15,6 +24,6 @@ body {
   background: $c-beige;
 }
 
-html {
-  scroll-behavior: smooth;
+.body--with-menu {
+  overflow: hidden;
 }
