@@ -14,9 +14,11 @@
 
   &__image-wrapper {
     grid-column: 1 / -1;
-    width: 100%;
+    width: calc(100% + var(--container-padding) * 2);
+    margin-inline: calc(var(--container-padding) * -1);
 
     @include tablet {
+      width: 100%;
       margin: 0;
     }
 

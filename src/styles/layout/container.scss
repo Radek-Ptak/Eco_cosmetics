@@ -1,14 +1,16 @@
 .container {
+  --container-padding: 20px;
+
   width: 100%;
   max-width: $bp-desktop;
   margin: 0 auto;
-  padding: 0 20px;
+  padding-inline: var(--container-padding);
 
   @include tablet {
-    padding: 0 27px;
+    --container-padding: 27px;
   }
 
   @include desktop {
-    padding: 0 50px;
+    --container-padding: 50px;
   }
 }
