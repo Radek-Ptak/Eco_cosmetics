@@ -85,12 +85,22 @@
     }
 
     @include desktop {
-      padding-bottom: 4px;
-      border-bottom: 1px solid transparent;
+      transform-origin: center;
+
+      display: inline-block;
+
+      padding: 0;
+
+      font-weight: $fw-medium;
+      line-height: 1.5;
       color: $c-green;
 
+      transition:
+        transform 0.3s ease,
+        color 0.3s ease;
+
       &:hover {
-        border-bottom-color: $c-dark;
+        transform: scale(1.1);
         color: $c-dark;
       }
     }
