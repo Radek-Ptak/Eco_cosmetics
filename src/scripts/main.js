@@ -70,6 +70,6 @@ if (backBtn && allProductsSection && page) {
     allProductsSection.classList.remove('all-products--active');
 
     // pokaż resztę strony
-    page.style.display = 'block';
+    page.style.display = '';
   });
 }
