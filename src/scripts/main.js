@@ -20,3 +20,56 @@ navLinks.forEach((link) => {
     document.body.classList.remove('body--with-menu');
   });
 });
+
+const shopLinks = document.querySelectorAll('.shop__link');
+const productGroups = document.querySelectorAll('.shop__products');
+
+shopLinks.forEach((link) => {
+  link.addEventListener('click', (e) => {
+    e.preventDefault();
+
+    const targetId = link.getAttribute('href').substring(1);
+    const targetGroup = document.getElementById(targetId);
+
+    if (targetGroup) {
+      shopLinks.forEach((l) => l.classList.remove('shop__link--active'));
+      link.classList.add('shop__link--active');
+
+      productGroups.forEach((group) =>
+        group.classList.remove('shop__products--active'),
+      );
+      targetGroup.classList.add('shop__products--active');
+    }
+  });
+});
+
+const allProductsSection = document.querySelector('.all-products');
+const allProductsBtn = document.querySelector('.product__button');
+const backBtn = document.querySelector('.js-back');
+
+// sekcja z resztą strony (hero + shop itd.)
+const page = document.getElementById('page');
+
+if (allProductsBtn && allProductsSection && page) {
+  allProductsBtn.addEventListener('click', (e) => {
+    e.preventDefault();
+
+    // pokaż all-products
+    allProductsSection.classList.add('all-products--active');
+
+    // ukryj resztę strony
+    page.style.display = 'none';
+  });
+}
+
+if (backBtn && allProductsSection && page) {
+  backBtn.addEventListener('click', (e) => {
+    e.preventDefault();
+
+    // schowaj all-products
+    allProductsSection.classList.remove('all-products--active');
+
+    // pokaż resztę strony
+    page.style.display = 'block';
+  });
+}
