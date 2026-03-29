@@ -1,6 +1,7 @@
 .hero {
   @include grid;
 
+  overflow-x: hidden;
   row-gap: 0;
   margin-top: 20px;
 

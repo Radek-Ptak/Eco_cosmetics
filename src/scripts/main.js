@@ -46,18 +46,14 @@ shopLinks.forEach((link) => {
 const allProductsSection = document.querySelector('.all-products');
 const allProductsBtn = document.querySelector('.product__button');
 const backBtn = document.querySelector('.js-back');
-
-// sekcja z resztą strony (hero + shop itd.)
 const page = document.getElementById('page');
 
 if (allProductsBtn && allProductsSection && page) {
   allProductsBtn.addEventListener('click', (e) => {
     e.preventDefault();
 
-    // pokaż all-products
     allProductsSection.classList.add('all-products--active');
 
-    // ukryj resztę strony
     page.style.display = 'none';
   });
 }
@@ -66,10 +62,8 @@ if (backBtn && allProductsSection && page) {
   backBtn.addEventListener('click', (e) => {
     e.preventDefault();
 
-    // schowaj all-products
     allProductsSection.classList.remove('all-products--active');
 
-    // pokaż resztę strony
     page.style.display = '';
   });
 }
