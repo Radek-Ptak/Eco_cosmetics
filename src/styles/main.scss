@@ -35,11 +35,13 @@ html {
 }
 
 body {
+  overflow-x: hidden;
+
   font-family: $font-primary;
   font-weight: $fw-regular;
   color: $c-dark;
+
   background: $c-beige;
-  overflow-x: hidden;
 }
 
 .body--with-menu {
