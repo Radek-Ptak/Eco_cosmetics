@@ -4,6 +4,12 @@ document.addEventListener('DOMContentLoaded', () => {
   const contactForm = document.querySelector('.form');
   const contactSubmitLink = document.querySelector('.contact__button.button');
   const textarea = document.querySelector('.form__textarea');
+  const allProductsSection = document.querySelector('.all-products');
+  const allProductsBtn = document.querySelector('.product__button');
+  const backBtn = document.querySelector('.js-back');
+  const page = document.getElementById('page');
+  const cartCountElement = document.querySelector('.js-cart-count');
+  let cartCount = 0;
 
   if (contactForm) {
     contactForm.addEventListener('submit', (event) => {
@@ -60,6 +66,16 @@ document.addEventListener('DOMContentLoaded', () => {
       const targetId = this.getAttribute('href');
       if (targetId && targetId !== '#') {
         e.preventDefault();
+
+        if (
+          allProductsSection &&
+          allProductsSection.classList.contains('all-products--active') &&
+          ['#home', '#shop', '#contact', '#about'].includes(targetId)
+        ) {
+          allProductsSection.classList.remove('all-products--active');
+          page.style.display = '';
+        }
+
         const targetElement = document.querySelector(targetId);
         if (targetElement) {
           targetElement.scrollIntoView({ behavior: 'smooth' });
@@ -94,18 +110,13 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  const allProductsSection = document.querySelector('.all-products');
-  const allProductsBtn = document.querySelector('.product__button');
-  const backBtn = document.querySelector('.js-back');
-  const page = document.getElementById('page');
-
   if (allProductsBtn && allProductsSection && page) {
     allProductsBtn.addEventListener('click', (e) => {
       e.preventDefault();
 
       allProductsSection.classList.add('all-products--active');
-
       page.style.display = 'none';
+      window.scrollTo(0, 0);
       history.replaceState(null, '', '#all-products');
     });
   }
@@ -115,9 +126,27 @@ document.addEventListener('DOMContentLoaded', () => {
       e.preventDefault();
 
       allProductsSection.classList.remove('all-products--active');
-
       page.style.display = '';
+      window.scrollTo(0, 0);
       history.replaceState(null, '', '#shop');
     });
   }
+
+  const allAddToCartButtons = document.querySelectorAll(
+    '.shop__products .button, .all-products .button:not(.js-back)',
+  );
+
+  allAddToCartButtons.forEach((btn) => {
+    btn.addEventListener('click', (e) => {
+      e.preventDefault();
+      cartCount += 1;
+
+      if (cartCountElement) {
+        cartCountElement.textContent = cartCount;
+        cartCountElement.style.display = 'inline-block';
+      }
+
+      alert('Product has been added to your bag!');
+    });
+  });
 });

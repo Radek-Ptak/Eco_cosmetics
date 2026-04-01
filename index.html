@@ -79,6 +79,7 @@
               alt="shop"
               class="shop-icon__image"
             />
+            <span class="js-cart-count">0</span>
           </a>
         </div>
       </div>
@@ -250,6 +251,33 @@
             </div>
             <div
               class="shop__products"
+              id="body"
+            >
+              <article class="product">
+                <div class="product__photo">
+                  <img
+                    src="src/images/herbal-body-scrub.jpg"
+                    alt="Eco cosmetics image"
+                    class="product__img"
+                  />
+                </div>
+                <h3 class="product__title">Herbal Body Scrub</h3>
+                <p class="product__price">120 UAH</p>
+              </article>
+              <article class="product product--secondary">
+                <div class="product__photo">
+                  <img
+                    src="src/images/solid-body-butter.jpg"
+                    alt="Eco cosmetics image"
+                    class="product__img"
+                  />
+                </div>
+                <h3 class="product__title">Solid Body Butter</h3>
+                <p class="product__price">50 UAH</p>
+              </article>
+            </div>
+            <div
+              class="shop__products"
               id="hair"
             >
               <article class="product">
@@ -273,6 +301,35 @@
                 </div>
                 <h3 class="product__title">Solid conditioner</h3>
                 <p class="product__price">60 UAH</p>
+              </article>
+            </div>
+            <div
+              class="shop__products"
+              id="candles"
+            >
+              <article class="product">
+                <div class="product__photo">
+                  <img
+                    src="src/images/forest-whisper-soy-candle.jpg"
+                    alt="Eco cosmetics image"
+                    class="product__img"
+                  />
+                </div>
+                <h3 class="product__title">Forest Whisper Soy Candle</h3>
+                <p class="product__price">80 UAH</p>
+              </article>
+              <article class="product product--secondary">
+                <div class="product__photo">
+                  <img
+                    src="src/images/mini-botanical-votives.jpg"
+                    alt="Eco cosmetics image"
+                    class="product__img"
+                  />
+                </div>
+                <h3 class="product__title">
+                  Mini Botanical Votives (set of 3)
+                </h3>
+                <p class="product__price">80 UAH</p>
               </article>
             </div>
             <a
@@ -322,7 +379,7 @@
               </div>
             </div>
             <a
-              href="#"
+              href="#about"
               class="link"
             >
               Learn More
@@ -364,7 +421,7 @@
               </div>
             </div>
             <a
-              href="#"
+              href="#shop"
               class="link ingredients__link"
             >
               Learn More
@@ -564,6 +621,64 @@
           <article class="articles">
             <div class="articles__photo">
               <img
+                src="src/images/herbal-body-scrub.jpg"
+                alt="Eco cosmetics image"
+                class="articles__img"
+              />
+            </div>
+            <h3 class="articles__title">Herbal Body Scrub</h3>
+            <p class="articles__price">120 UAH</p>
+            <p class="articles__weight">30 g</p>
+            <a
+              href="#add-to-bag"
+              class="articles__button button"
+            >
+              add to bag
+            </a>
+            <p class="articles__ingredients">
+              <span class="articles__ingredients__highlight">Ingredients:</span>
+              sea salt, coconut oil, ground coffee beans, dried sage leaves,
+              rosemary essential oil, vitamin E.
+            </p>
+            <p class="articles__application">
+              <span class="articles__application__highlight">Application:</span>
+              apply to damp skin, massage in circular motions for 2–3 minutes to
+              stimulate circulation and exfoliate. Rinse with warm water. Use
+              1–2 times a week for best results.
+            </p>
+          </article>
+          <article class="articles">
+            <div class="articles__photo">
+              <img
+                src="src/images/solid-body-butter.jpg"
+                alt="Eco cosmetics image"
+                class="articles__img"
+              />
+            </div>
+            <h3 class="articles__title">Solid Body Butter</h3>
+            <p class="articles__price">50 UAH</p>
+            <p class="articles__weight">30 g</p>
+            <a
+              href="#add-to-bag"
+              class="articles__button button"
+            >
+              add to bag
+            </a>
+            <p class="articles__ingredients">
+              <span class="articles__ingredients__highlight">Ingredients:</span>
+              shea butter, cocoa butter, beeswax, sweet almond oil, orange
+              essential oil, dried calendula petals.
+            </p>
+            <p class="articles__application">
+              <span class="articles__application__highlight">Application:</span>
+              warm the bar between your hands or glide it directly over dry
+              skin. The butter will melt into a nourishing oil upon contact with
+              body heat. Perfect for elbows, knees, and dry areas.
+            </p>
+          </article>
+          <article class="articles">
+            <div class="articles__photo">
+              <img
                 src="src/images/almond-shampoo.jpg"
                 alt="Eco cosmetics image"
                 class="articles__img"
@@ -619,6 +734,64 @@
               creamy coating or draw the block directly over the wet lengths and
               ends of your hair. Leave for 1–2 minutes, then rinse thoroughly
               with warm water.
+            </p>
+          </article>
+          <article class="articles">
+            <div class="articles__photo">
+              <img
+                src="src/images/forest-whisper-soy-candle.jpg"
+                alt="Eco cosmetics image"
+                class="articles__img"
+              />
+            </div>
+            <h3 class="articles__title">Forest Whisper Soy Candle</h3>
+            <p class="articles__price">80 UAH</p>
+            <p class="articles__weight">30 g</p>
+            <a
+              href="#add-to-bag"
+              class="articles__button button"
+            >
+              add to bag
+            </a>
+            <p class="articles__ingredients">
+              <span class="articles__ingredients__highlight">Ingredients:</span>
+              natural soy wax, pine needle essential oil, cedarwood oil, cotton
+              wick, dried larch needles.
+            </p>
+            <p class="articles__application">
+              <span class="articles__application__highlight">Application:</span>
+              trim the wick to 5mm before each lighting. Burn the candle for at
+              least 1–2 hours during the first use to ensure an even melt pool
+              to the edges of the jar. Never leave a burning candle unattended.
+            </p>
+          </article>
+          <article class="articles">
+            <div class="articles__photo">
+              <img
+                src="src/images/mini-botanical-votives.jpg"
+                alt="Eco cosmetics image"
+                class="articles__img"
+              />
+            </div>
+            <h3 class="articles__title">Mini Botanical Votives (set of 3)</h3>
+            <p class="articles__price">80 UAH</p>
+            <p class="articles__weight">30 g</p>
+            <a
+              href="#add-to-bag"
+              class="articles__button button"
+            >
+              add to bag
+            </a>
+            <p class="articles__ingredients">
+              <span class="articles__ingredients__highlight">Ingredients:</span>
+              soy wax, lavender essential oil, dried lavender flowers, rose
+              petals, beeswax.
+            </p>
+            <p class="articles__application">
+              <span class="articles__application__highlight">Application:</span>
+              place the votive on a stable, heat-resistant coaster. Keep away
+              from drafts and flammable objects. Ideal for creating a relaxing
+              atmosphere during meditation or a bath.
             </p>
           </article>
           <a
